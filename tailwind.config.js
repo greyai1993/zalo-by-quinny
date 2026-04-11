@@ -7,9 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
+        primary: { DEFAULT: "#7C5F40", light: "#9B7D5A", dark: "#5C4220" },
+        background: { DEFAULT: "#F6F2EA", section: "#EDE8E0" },
+        text: { DEFAULT: "#2C1810" },
         secondary: "var(--secondary)",
-        background: "var(--background)",
         foreground: "var(--foreground)",
         section: "var(--section)",
         inactive: "var(--inactive)",

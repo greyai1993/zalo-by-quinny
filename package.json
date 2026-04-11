@@ -17,7 +17,8 @@
   "scripts": {
     "start": "zmp start",
     "deploy": "zmp deploy",
-    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
+    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css",
+    "build": "vite build"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.4",
