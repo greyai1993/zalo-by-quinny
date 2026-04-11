@@ -1,52 +1,37 @@
 [
   {
     "id": 1,
-    "name": "Áo len",
+    "name": "Tất cả",
     "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
   },
   {
     "id": 2,
-    "name": "Blazer",
+    "name": "Áo",
     "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/blazer.webp"
   },
   {
     "id": 3,
+    "name": "Set Outfit",
+    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/ao-phong.webp"
+  },
+  {
+    "id": 4,
     "name": "Đầm",
     "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/dam.webp"
   },
   {
-    "id": 4,
-    "name": "Áo phông",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/ao-phong.webp"
-  },
-  {
     "id": 5,
-    "name": "Áo gi lê",
+    "name": "Chân Váy",
     "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/ao-gile.webp"
   },
   {
     "id": 6,
-    "name": "Chân váy",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/chan-vay.webp"
+    "name": "Mới Về",
+    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
   },
   {
     "id": 7,
-    "name": "Quần short",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/quan-short.webp"
-  },
-  {
-    "id": 8,
-    "name": "Quần bò",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/quan-jean.webp"
-  },
-  {
-    "id": 9,
-    "name": "Túi xách",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/tui-xach.webp"
-  },
-  {
-    "id": 10,
-    "name": "Phụ kiện",
-    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/phu-kien.webp"
+    "name": "Sale",
+    "image": "https://stc-zmp.zadn.vn/zaui-fashion/category/blazer.webp"
   }
 ]

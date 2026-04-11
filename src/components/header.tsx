@@ -6,7 +6,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { categoriesStateUpwrapped } from "@/state";
-import headerLogoImage from "@/static/header-logo.svg";
+import headerLogoImage from "@/static/by-quinny-logo.png";
 import { BackIcon } from "./vectors";
 import { useMemo } from "react";
 import { useRouteHandle } from "@/hooks";

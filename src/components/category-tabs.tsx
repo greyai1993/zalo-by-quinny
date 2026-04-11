@@ -7,7 +7,7 @@ export default function CategoryTabs() {
   const [selectedIndex, setSelectedIndex] = useAtom(selectedTabIndexState);
   return (
     <Tabs
-      items={["Tất cả", "Nam", "Nữ", "Trẻ em"]}
+      items={["Tất cả", "Áo", "Set Outfit", "Đầm", "Chân Váy", "Mới Về", "Sale"]}
       value={tabs[selectedIndex]}
       onChange={(tab) => setSelectedIndex(tabs.indexOf(tab))}
       renderLabel={(item) => item}
