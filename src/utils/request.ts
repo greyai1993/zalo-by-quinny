@@ -18,7 +18,18 @@ export async function request<T>(
   if (!API_URL) {
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
-  const response = await fetch(url, options);
+
+  const headers = {
+    "Content-Type": "application/json",
+    "x-api-key": import.meta.env.VITE_MINIAPP_API_KEY || "",
+    ...(options?.headers || {}),
+  };
+
+  const response = await fetch(url, {
+    ...options,
+    headers,
+  });
+
   return response.json() as T;
 }
 

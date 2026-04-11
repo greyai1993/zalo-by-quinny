@@ -19,7 +19,7 @@ export const tabsState = atom(["Tất cả", "Nam", "Nữ", "Trẻ em"]);
 export const selectedTabIndexState = atom(0);
 
 export const categoriesState = atom(() =>
-  requestWithFallback<Category[]>("/categories", [])
+  requestWithFallback<Category[]>("/api/miniapp/categories", [])
 );
 
 export const categoriesStateUpwrapped = unwrap(
@@ -31,7 +31,7 @@ export const productsState = atom(async (get) => {
   const categories = await get(categoriesState);
   const products = await requestWithFallback<
     (Product & { categoryId: number })[]
-  >("/products", []);
+  >("/api/miniapp/products", []);
   return products.map((product) => ({
     ...product,
     category: categories.find(

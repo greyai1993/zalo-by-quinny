@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Clothing store",
+    "title": "By Quinny",
     "textColor": "black",
     "headerColor": "#ffffff",
     "statusBar": "normal",
@@ -13,8 +13,8 @@
   "listSyncJS": [],
   "listAsyncJS": [],
   "template": {
-    "name": "zaui-fashion",
-    "apiUrl": "",
+    "name": "By Quinny",
+    "apiUrl": "https://backend-by-quinny.vercel.app",
     "oaIDtoOpenChat": "4318657068771012646"
   }
 }
