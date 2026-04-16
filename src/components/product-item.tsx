@@ -26,7 +26,7 @@ export default function ProductItem(props: ProductItemProps) {
         <>
           <img
             src={props.product.image}
-            className="w-full aspect-square object-cover rounded-t-lg"
+            className="w-full aspect-[3/4] object-cover rounded-t-lg"
             style={{
               viewTransitionName:
                 isTransitioning && selected // only animate the "clicked" product item in related products list
