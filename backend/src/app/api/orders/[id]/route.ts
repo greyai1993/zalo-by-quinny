@@ -184,7 +184,7 @@ async function creditLoyaltyOnDelivery(
     // Fetch customer data for bonus checks
     const { data: customer } = await supabaseAdmin
       .from('customers')
-      .select('id, total_points, order_count, birthday')
+      .select('id, total_points, order_count, birthday, total_spent')
       .eq('id', customerId)
       .single();
 
