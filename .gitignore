@@ -36,3 +36,10 @@ Thumbs.db
 
 # Production build
 www/
+
+# Backend env files (NEVER commit secrets)
+backend/.env*
+!backend/.env.example
+
+# Next.js build output
+backend/.next/

@@ -41,7 +41,7 @@ export const categoriesState = atom(async () => {
   }
 });
 
-export const categoriesStateUpwrapped = unwrap(
+export const categoriesStateUnwrapped = unwrap(
   categoriesState,
   (prev) => prev ?? []
 );
@@ -84,7 +84,7 @@ export const productsState = atom(async (get) => {
     return res.products.map((p) => ({
       id: p.id as unknown as number,
       name: p.name,
-      price: p.price,
+      price: p.sale_price || p.price,
       originalPrice: p.sale_price ? p.price : undefined,
       image: p.images?.[0] || "",
       category: p.category

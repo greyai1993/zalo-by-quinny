@@ -30,6 +30,10 @@ export async function request<T>(
     headers,
   });
 
+  if (!response.ok) {
+    throw new Error(`API error ${response.status}: ${response.statusText}`);
+  }
+
   return response.json() as T;
 }
 

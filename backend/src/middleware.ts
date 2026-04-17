@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const ADMIN_PASSWORD = (process.env.ADMIN_PASSWORD || 'byquinny2026').trim();
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD?.trim();
+if (!ADMIN_PASSWORD) {
+  console.error('[middleware] ADMIN_PASSWORD env var is not set!');
+}
 const COOKIE_NAME = 'bq_admin_auth';
 
 export function middleware(request: NextRequest) {
@@ -14,6 +17,11 @@ export function middleware(request: NextRequest) {
   // Allow login page through
   if (pathname === '/admin/login') {
     return NextResponse.next();
+  }
+
+  // Block admin if password not configured
+  if (!ADMIN_PASSWORD) {
+    return NextResponse.json({ error: 'Admin not configured' }, { status: 503 });
   }
 
   // Check auth cookie

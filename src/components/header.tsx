@@ -5,14 +5,14 @@ import {
   useMatches,
   useNavigate,
 } from "react-router-dom";
-import { categoriesStateUpwrapped } from "@/state";
+import { categoriesStateUnwrapped } from "@/state";
 import headerLogoImage from "@/static/by-quinny-logo.png";
 import { BackIcon } from "./vectors";
 import { useMemo } from "react";
 import { useRouteHandle } from "@/hooks";
 
 export default function Header() {
-  const categories = useAtomValue(categoriesStateUpwrapped);
+  const categories = useAtomValue(categoriesStateUnwrapped);
   const navigate = useNavigate();
   const location = useLocation();
   const [handle, match] = useRouteHandle();
