@@ -383,17 +383,21 @@ export async function POST(req: NextRequest) {
       console.warn('[orders] Telegram notification failed:', tgErr);
     }
 
-    // Trigger Abit sync (non-blocking)
-    fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ''}/api/sync/abit`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...(process.env.SYNC_SECRET_KEY
-          ? { 'x-sync-secret': process.env.SYNC_SECRET_KEY }
-          : {}),
-      },
-      body: JSON.stringify({ order_id: order.id }),
-    }).catch((e) => console.warn('[orders] Abit sync trigger failed:', e));
+    // Trigger Abit sync — must await before returning (Vercel kills after response)
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ''}/api/sync/abit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(process.env.SYNC_SECRET_KEY
+            ? { 'x-sync-secret': process.env.SYNC_SECRET_KEY }
+            : {}),
+        },
+        body: JSON.stringify({ order_id: order.id }),
+      });
+    } catch (e) {
+      console.warn('[orders] Abit sync trigger failed:', e);
+    }
 
     return NextResponse.json(order, { status: 201 });
   } catch (err) {

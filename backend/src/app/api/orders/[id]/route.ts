@@ -229,7 +229,7 @@ async function creditLoyaltyOnDelivery(
         total_points: newTotal,
         tier: newTier,
         order_count: (customer.order_count ?? 0) + 1,
-        total_spent: total,
+        total_spent: (customer.total_spent ?? 0) + total,
         updated_at: new Date().toISOString(),
       })
       .eq('id', customerId);
